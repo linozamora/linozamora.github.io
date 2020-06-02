@@ -1,0 +1,33 @@
+/**
+ *
+ * You can write your CSS code here, DO NOT touch the default JavaScript file
+ * because it will make it harder for you to update.
+ * 
+ */
+
+/*# sourceMappingURL=custom.css.map */
+body {
+    color: #6d6e71;
+}
+
+.main-footer {
+    font-size: 12px;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.icon-left{
+  padding-right: 10px;
+}
+
+.main-sidebar .sidebar-brand a{
+    color: #956daf;
+}
+.main-sidebar .sidebar-brand a span{
+    color: #f47920;
+}
+.navbar .active .nav-link{
+    font-weight: 800;
+}

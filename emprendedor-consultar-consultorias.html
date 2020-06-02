@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Consultar Consultorias - SinapsisUAO</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="node_modules/select2/dist/css/select2.min.css">
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+            <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
+          </ul>
+          <div class="search-element">
+            <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" data-width="250">
+            <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+            <div class="search-backdrop"></div>
+
+          </div>
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Mensajes
+                <div class="float-right">
+                  <a href="#">Marcar todos como leídos</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-message">
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-avatar">
+                    <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle">
+                    <div class="is-online"></div>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    <b>Juan Valdez</b>
+                    <p>Necesito los datos legales de tu proyecto</p>
+                    <div class="time">hace 1 horas</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-avatar">
+                    <img alt="image" src="assets/img/avatar/avatar-2.png" class="rounded-circle">
+                  </div>
+                  <div class="dropdown-item-desc">
+                    <b>Romir Chavez</b>
+                    <p>Enviame los lineamientos para las presentación</p>
+                    <div class="time">hace 20 minutos</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">Ver todos <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Notificaciones
+                <div class="float-right">
+                  <a href="#">Marcar todas como vistas</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Te falta subir el diagrama de secuencia
+                    <div class="time text-primary">hace 2 días</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="far fa-user"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Ya estan listas las pruebas? 
+                    <div class="time">Hace 25 minutos</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">Ver todos <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Hola, Emprendedor</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-title">Gestiona tu cuenta</div>
+              <a href="#" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Perfil
+              </a>
+              <a href="#" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> Mis tareas
+              </a>
+              <a href="#" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Configuraciones
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Salir
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- Desde acá es el menu hamburguesa-->
+      <div class="main-sidebar">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="/"><img src="assets/img/sinapsis-sidebar.png" title="Ir al inicio" width="150" ></a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="/">S<span>U</span></a>
+          </div>
+          <ul class="sidebar-menu">
+              <li class="nav-item dropdown active">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-user"></i><span>Facilitadores</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="#">Juan Guerra</a></li>
+                  <li><a class="nav-link" href="#">Jenny Lopez</a></li>
+				  <li><a class="nav-link" href="#">Alirio Urritia</a></li>
+                  <li><a class="nav-link" href="#">Ver todos</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-calendar-alt"></i> <span>Consultorias</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="agenda-una-cita.html">Induccion al emprendimiento</a></li>
+                  <li><a class="nav-link" href="agenda-una-cita.html">Generando conciencia</a></li>
+                  <li><a class="nav-link" href="agenda-una-cita.html">Practicas</a></li>
+                  <li><a class="nav-link" href="#">Ver todos</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="sidebar-menu">                                  
+              <li class="nav-item dropdown active">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-bars"></i><span>Eventos</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="#">Creando motores</a></li>
+				  <li><a class="nav-link" href="#">Internet para todos</a></li>
+				  <li><a class="nav-link" href="#">Ambiente y desarrollo</a></li>
+                  <li><a class="nav-link" href="#">Ver todos</a></li>
+                </ul>
+              </li>
+            <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
+              <a href="emprendedor-consultar-consultorias.html" class="btn btn-primary btn-lg btn-block btn-icon-split">
+                <i class="fas fa-fire"></i> Consultar Consultorias
+              </a>
+              <a href="emprendedor-crear-horario-disponibilidad-consultoria.html" class="btn btn-primary btn-lg btn-block btn-icon-split">
+                <i class="fas fa-calendar-alt"></i> Crear Consultoria
+              </a>             
+              <a href="emprendedor-crear-emprendimiento-p1.html" class="btn btn-primary btn-lg btn-block btn-icon-split">
+                <i class="fas fa-fire"></i> Crear Emprendimiento
+              </a>
+			  <a href="emprendedor-interfaz-inicio.html" class="btn btn-primary btn-lg btn-block btn-icon-split">
+                <i class="fas fa-bars"></i> Regresar a Inicio
+              </a>
+            </div>
+        </aside>
+      </div>
+      <!-- acá termina-->
+      <!-- Main Content -->
+      <br>
+      <br>                
+        <div class="main-content">
+  <section class="section">
+      <div class="section-body">
+          <h2 class="section-title">Consultar consultorias</h2>
+          <p class="section-lead"></p>
+          <div class="card">
+              <div class="card-header">
+                  <h4>Consultorias ordenadas de mas reciente a mas longeva</h4>
+              </div>
+              <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4>Tabla de consultorias</h4>
+          <div class="card-header-form">
+            <form>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Buscar">
+                <div class="input-group-btn">
+                  <button class="btn btn-primary"><i class="fas fa-search"></i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <div class="table-responsive">
+            <table class="table table-striped">
+              <tr>
+                <th>
+                  <div class="custom-checkbox custom-control">
+                    <input type="checkbox" data-checkboxes="mygroup" data-checkbox-role="dad" class="custom-control-input" id="checkbox-all">
+                    <label for="checkbox-all" class="custom-control-label">&nbsp;</label>
+                  </div>
+                </th>
+                <th>Fecha</th>
+                <th>Hora inicio</th>
+                <th>Hora culminación</th>
+                <th>Nombre del facilitador</th>
+                <th>Acciones</th>
+              </tr>
+              <tr>
+                <td class="p-0 text-center">
+                  <div class="custom-checkbox custom-control">
+                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-1">
+                    <label for="checkbox-1" class="custom-control-label">&nbsp;</label>
+                  </div>
+                </td>
+                <td>2020-05-26</td>
+                <td>09:00 AM</td>
+                <td>10:00 AM</td>
+                <td>Juan Guerra</td>
+                <td><a href="emprendedor-crear-horario-disponibilidad-consultoria.html" class="btn btn-secondary">Editar</a></td>
+                <td><a href="emprendedor-eliminar-consultoria-confirmacion.html" class="btn btn-secondary">Eliminar</a></td>
+              </tr>
+              <tr>
+                <td class="p-0 text-center">
+                  <div class="custom-checkbox custom-control">
+                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-1">
+                    <label for="checkbox-1" class="custom-control-label">&nbsp;</label>
+                  </div>
+                </td>
+                <td>2020-05-15</td>
+                <td>11:00 AM</td>
+                <td>12:00 PM</td>
+                <td>Jenny Lopez</td>               
+                <td><a href="emprendedor-crear-horario-disponibilidad-consultoria.html" class="btn btn-secondary">Editar</a></td>
+                <td><a href="emprendedor-eliminar-consultoria-confirmacion.html" class="btn btn-secondary">Eliminar</a></td>
+              </tr>
+			  <tr>
+                <td class="p-0 text-center">
+                  <div class="custom-checkbox custom-control">
+                    <input type="checkbox" data-checkboxes="mygroup" class="custom-control-input" id="checkbox-1">
+                    <label for="checkbox-1" class="custom-control-label">&nbsp;</label>
+                  </div>
+                </td>
+                <td>2020-05-08</td>
+                <td>01:00 PM</td>
+                <td>02:00 PM</td>
+                <td>Alirio Urrutia</td>
+                <td><a href="emprendedor-crear-horario-disponibilidad-consultoria.html" class="btn btn-secondary">Editar</a></td>
+                <td><a href="emprendedor-eliminar-consultoria-confirmacion.html" class="btn btn-secondary">Eliminar</a></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      <footer class="main-footer">
+          <div class="footer-left">
+              <img src="assets/img/UAO-logo-acreditacion.png" width="200"/>
+          </div>
+          <div class="footer-right">
+              <p>
+                  Personería jurídica, Res. No. 0618, de la Gobernación del Valle del Cauca, del 20 de febrero de
+                  1970.<br>
+                  Universidad Autónoma de Occidente, Res. No. 2766, del Ministerio de Educación Nacional, del 13 de
+                  noviembre de 2003.<br>
+                  Acreditación Institucional de Alta Calidad, Res. No. 16740, del 24 de agosto de 2017, con vigencia
+                  hasta el 2021.<br>
+                  Universidad Vigilada MinEducación
+              </p>
+              <p class="text-black-50">
+                  La Universidad Autónoma de Occidente está sujeta a inspección y vigilancia por el Ministerio de
+                  Educación Nacional - Artículo 39 del decreto 1295 de 2010
+              </p>
+              Copyright &copy; 2020 <div class="bullet"></div> SinapsisUAO
+          </div>
+      </footer>
+  </div>
+</div>
+
+  <!-- General JS Scripts -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
+  <script src="node_modules/moment/moment.js"></script>
+  <script src="node_modules/moment/locale/es.js"></script>
+  <script src="assets/js/stisla.js"></script>
+  <!-- JS Libraies -->
+  <script src="node_modules/select2/dist/js/select2.full.min.js"></script>
+  <!-- Template JS File -->
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <!-- Page Specific JS File -->
+
+</body>
+</html>
+

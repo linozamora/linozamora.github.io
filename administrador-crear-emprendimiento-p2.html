@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <title>Crear Proyecto de Emprendimiento p2 - SinapsisUAO</title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+  <!-- CSS Libraries -->
+  <link rel="stylesheet" href="node_modules/select2/dist/css/select2.min.css">
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="main-wrapper">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <form class="form-inline mr-auto">
+          <ul class="navbar-nav mr-3">
+            <li><a href="#" data-toggle="sidebar" class="nav-link nav-link-lg"><i class="fas fa-bars"></i></a></li>
+            <li><a href="#" data-toggle="search" class="nav-link nav-link-lg d-sm-none"><i class="fas fa-search"></i></a></li>
+          </ul>
+          <div class="search-element">
+            <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" data-width="250">
+            <button class="btn" type="submit"><i class="fas fa-search"></i></button>
+            <div class="search-backdrop"></div>
+
+          </div>
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link nav-link-lg message-toggle beep"><i class="far fa-envelope"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Mensajes
+                <div class="float-right">
+                  <a href="#">Marcar todos como leídos</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-message">
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-avatar">
+                    <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle">
+                    <div class="is-online"></div>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    <b>Juan Llanos</b>
+                    <p>El perfil del proyecto está súper!</p>
+                    <div class="time">hace 10 horas</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-avatar">
+                    <img alt="image" src="assets/img/avatar/avatar-2.png" class="rounded-circle">
+                  </div>
+                  <div class="dropdown-item-desc">
+                    <b>Maria Arrieta</b>
+                    <p>Reunamos los documentos que hacen falta</p>
+                    <div class="time">hace 10 minutos</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">Ver todos <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Notificaciones
+                <div class="float-right">
+                  <a href="#">Marcar todas como vistas</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Te falta subir el documento de perfil del proyecto
+                    <div class="time text-primary">hace 2 días</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="far fa-user"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Se ha agendado una nueva cita <b>Técnica</b> con Adolfo Ríos
+                    <div class="time">Hace 20 minutos</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">Ver todos <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+          <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            <img alt="image" src="assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <div class="d-sm-none d-lg-inline-block">Hola, Administrador</div></a>
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-title">Gestiona tu cuenta</div>
+              <a href="#" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> Perfil
+              </a>
+              <a href="#" class="dropdown-item has-icon">
+                <i class="fas fa-bolt"></i> Mis tareas
+              </a>
+              <a href="#" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Configuraciones
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="#" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Salir
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+      <!-- Desde acá es el menu hamburguesa-->
+      <div class="main-sidebar">
+        <aside id="sidebar-wrapper">
+          <div class="sidebar-brand">
+            <a href="/"><img src="assets/img/sinapsis-sidebar.png" title="Ir al inicio" width="150" ></a>
+          </div>
+          <div class="sidebar-brand sidebar-brand-sm">
+            <a href="/">S<span>U</span></a>
+          </div>
+          <ul class="sidebar-menu">
+              <li class="nav-item dropdown active">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Emprendimientos</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="#">Llantas de goma reciclable</a></li>
+                  <li><a class="nav-link" href="#">Cultivo de aguacate</a></li>
+				  <li><a class="nav-link" href="#">Calidroid Tecnologia</a></li>
+                  <li><a class="nav-link" href="#">Ver todos</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-calendar-alt"></i> <span>Consultorias</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="agenda-una-cita.html">Negocios verdes</a></li>
+                  <li><a class="nav-link" href="agenda-una-cita.html">Finaciera e inversión</a></li>
+                  <li><a class="nav-link" href="agenda-una-cita.html">Técnicas</a></li>
+                  <li><a class="nav-link" href="#">Ver todos</a></li>
+                </ul>
+              </li>
+            </ul>
+            <ul class="sidebar-menu">
+              <li class="nav-item dropdown active">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-user"></i><span>Facilitadores</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="#">Juan Guerra</a></li>
+                  <li><a class="nav-link" href="#">Jenny Lopez</a></li>
+				  <li><a class="nav-link" href="#">Alirio Urritia</a></li>
+                  <li><a class="nav-link" href="#">Ver todos</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown active">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-user"></i><span>Emprendedores</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="#">Carlos Montoya</a></li>
+                  <li><a class="nav-link" href="#">Any Baicue</a></li>
+				  <li><a class="nav-link" href="#">Mario Solan</a></li>
+                  <li><a class="nav-link" href="#">Ver todos</a></li>
+                </ul>
+              </li>
+              
+              <li class="nav-item dropdown active">
+                <a href="#" class="nav-link has-dropdown"><i class="fas fa-bars"></i><span>Eventos</span></a>
+                <ul class="dropdown-menu">
+                  <li><a class="nav-link" href="#">Creando motores</a></li>
+				  <li><a class="nav-link" href="#">Internet para todos</a></li>
+				  <li><a class="nav-link" href="#">Ambiente y desarrollo</a></li>
+                  <li><a class="nav-link" href="#">Ver todos</a></li>
+                </ul>
+              </li>
+            <div class="mt-4 mb-4 p-3 hide-sidebar-mini">
+              <a href="administrador-crear-emprendimiento-p1.html" class="btn btn-primary btn-lg btn-block btn-icon-split">
+                <i class="fas fa-fire"></i> Crear Emprendimiento
+              </a>
+              <a href="administrador-crear-horario-disponibilidad-consultoria.html" class="btn btn-primary btn-lg btn-block btn-icon-split">
+                <i class="fas fa-calendar-alt"></i> Crear Consultoria
+              </a>
+              <a href="administrador-crear-facilitador-p1.html" class="btn btn-primary btn-lg btn-block btn-icon-split">
+                <i class="fas fa-user"></i> Crear Facilitador
+              </a>
+			  <a href="administrador-consultar-consultorias.html" class="btn btn-primary btn-lg btn-block btn-icon-split">
+                <i class="fas fa-calendar-alt"></i> Consultar Consultorias
+              </a>
+			  <a href="administrador-consultar-facilitadores.html" class="btn btn-primary btn-lg btn-block btn-icon-split">
+                <i class="fas fa-calendar-alt"></i> Consultar Facilitadores
+              </a>
+              <a href="administrador-crear-emprendedor-p1.html" class="btn btn-primary btn-lg btn-block btn-icon-split">
+                <i class="fas fa-user"></i> Crear Emprendedor
+              </a>
+              <a href="administrador-crear-evento.html" class="btn btn-primary btn-lg btn-block btn-icon-split">
+                <i class="fas fa-bars"></i> Crear Evento
+              </a>
+			  <a href="administrador-interfaz-inicio.html" class="btn btn-primary btn-lg btn-block btn-icon-split">
+                <i class="fas fa-bars"></i> Regresar a Inicio
+              </a>
+            </div>
+        </aside>
+      </div>
+      <!-- acá termina-->
+      <!-- Main Content -->
+      <div class="main-content">
+        <section class="section">
+            <div class="section-body">
+              <br>
+              <br>  
+                 <h2 class="section-title">Creación de un proyecto de Emprendimiento</h2>
+                  
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="card-body">
+                        <div class="row mt-4">
+                          <div class="col-12 col-lg-8 offset-lg-2">
+                            <div class="wizard-steps">
+                              <div class="wizard-step">
+                                <div class="wizard-step-icon">
+                                  <i class="far fa-user"></i>
+                                </div>
+                                <div class="wizard-step-label">
+                                  Datos básicos
+                                </div>
+                              </div>
+                              <div class="wizard-step wizard-step-active">
+                            <div class="wizard-step-icon">
+                              <i class="fas fa-project-diagram "></i>
+                            </div>
+                            <div class="wizard-step-label">
+                              Tipo de proyecto
+                            </div>
+                          </div>
+                          <div class="wizard-step">
+                            <div class="wizard-step-icon">
+                              <i class="fas fa-tasks"></i>
+                            </div>
+                            <div class="wizard-step-label">
+                              Datos legales
+                            </div>
+                          </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group row">
+                          <label class="col-md-4 text-md-right text-left mt-2">Tipo de emprendimiento</label>
+                          <div class="col-lg-4 col-md-6">
+                            <select class="form-control select2">
+                              <option>Verde</option>
+                              <option>Social</option>
+                              <option>Tecnologico/Digital</option>
+							  <option>Creativo</option>
+                            </select>
+                          </div>
+                        </div>
+						<div class="form-group row">
+                          <label class="col-md-4 text-md-right text-left mt-2">Etapa</label>
+                          <div class="col-lg-4 col-md-6">
+                            <select class="form-control select2">
+                              <option>Descubrimiento</option>
+                              <option>Pre arranque</option>
+                              <option>Arranque</option>
+							  <option>Operacion</option>
+                            </select>
+                          </div>
+                        </div>
+						<div class="form-group row">
+                          <label class="col-md-4 text-md-right text-left mt-2">¿Esta formalizado?</label>
+                          <div class="col-lg-4 col-md-6">
+                            <div class="selectgroup w-100">
+                              <label class="selectgroup-item">
+                                <input type="radio" name="value" value="developer" class="selectgroup-input">
+                                <span class="selectgroup-button">Si</span>
+                              </label>
+                              <label class="selectgroup-item">
+                                <input type="radio" name="value" value="ceo" class="selectgroup-input">
+                                <span class="selectgroup-button">No</span>
+                              </label>                             
+                            </div>
+                          </div>
+                        </div>
+                        <form class="wizard-content mt-2">                                     
+<!-- Area de enfoque sub menu desplegable y facultad no obligatoria-->
+                            <div class="form-group row">
+                              <div class="col-md-4"></div>
+                              <div class="col-lg-4 col-md-6">
+                                <div class="custom-control custom-checkbox">
+                                  <input type="checkbox" name="agree" class="custom-control-input" id="agree">
+                                  <label class="custom-control-label" for="agree">Estoy de acuerdo con el tratamiento de los datos</label>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="form-group row">
+                              <div class="col-md-4"></div>
+                              <div class="col-lg-4 col-md-6 text-right">
+                                <a href="administrador-crear-emprendimiento-p3.html" class="btn btn-icon icon-right btn-primary">Siguiente <i class="fas fa-arrow-right"></i></a>
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                      </div>
+                      </section>
+                      </div>
+
+                    </div>
+                    </div>
+                    <div class="card-footer bg-whitesmoke">
+                        Actualizado el 02 de Junio de 2020
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer class="main-footer">
+        <div class="footer-left">
+            <img src="assets/img/UAO-logo-acreditacion.png" width="200"/>
+        </div>
+        <div class="footer-right">
+            <p>
+                Personería jurídica, Res. No. 0618, de la Gobernación del Valle del Cauca, del 20 de febrero de
+                1970.<br>
+                Universidad Autónoma de Occidente, Res. No. 2766, del Ministerio de Educación Nacional, del 13 de
+                noviembre de 2003.<br>
+                Acreditación Institucional de Alta Calidad, Res. No. 16740, del 24 de agosto de 2017, con vigencia
+                hasta el 2021.<br>
+                Universidad Vigilada MinEducación
+            </p>
+            <p class="text-black-50">
+                La Universidad Autónoma de Occidente está sujeta a inspección y vigilancia por el Ministerio de
+                Educación Nacional - Artículo 39 del decreto 1295 de 2010
+            </p>
+            Copyright &copy; 2020 <div class="bullet"></div> SinapsisUAO
+        </div>
+    </footer>
+</div>
+</div>
+
+  <!-- General JS Scripts -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/jquery.nicescroll/dist/jquery.nicescroll.min.js"></script>
+  <script src="node_modules/moment/moment.js"></script>
+  <script src="node_modules/moment/locale/es.js"></script>
+  <script src="assets/js/stisla.js"></script>
+  <!-- JS Libraies -->
+  <script src="node_modules/select2/dist/js/select2.full.min.js"></script>
+  <!-- Template JS File -->
+  <script src="assets/js/scripts.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <!-- Page Specific JS File -->
+
+</body>
+</html>
